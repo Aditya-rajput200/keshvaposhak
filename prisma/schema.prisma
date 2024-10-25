@@ -74,16 +74,13 @@ model Product {
   discount Float?
   image    String
   detail   String
-  catogory CatogoryEnum
+  category CategoryEnum
   cartItems      CartItem[]
-
   reviews      ProductReview[]
   orderItems   OrderItem[]
-
-  wishlists Wishlist[]
-   createdAt DateTime @default(now())
-   updatedAt DateTime @updatedAt
-
+  wishlists    Wishlist[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 model ProductReview {
@@ -138,11 +135,9 @@ enum OrderStatusEnum {
 
 }
 
-
-enum CatogoryEnum {
+enum CategoryEnum {
   Clothes
   Murti
   Tilak
   Accessories
-
 }
